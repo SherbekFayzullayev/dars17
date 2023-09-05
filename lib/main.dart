@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -5,11 +6,11 @@ void main() {
     debugShowCheckedModeBanner: false,
     home: Scaffold(
       backgroundColor: Color.fromARGB(255, 3, 3, 3),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body:Column(
+        
         children: [     
-          Column(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               
               Text('Types of Icons',style: TextStyle(
@@ -20,25 +21,22 @@ void main() {
               ),),
             ],
           ),   
-        Column(
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
         Container(
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.only(top:60,bottom: 3),
           width: 100,
           height: 100,
                     child: Icon(Icons.photo_camera_outlined,size:40,color: const Color.fromARGB(255, 246, 241, 241),),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 137, 126, 126),
+            color: Color.fromARGB(255, 105, 95, 95),
             borderRadius: BorderRadius.circular(30),
           ),
         ),
-        Text('Camera',style: TextStyle(
-          fontSize: 20,
-          color: Color.fromARGB(255, 238, 239, 240),
-        ),),
+        
         Container(
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.only(top:60,bottom: 3,left: 40),
           width: 100,
           height: 100,
           decoration: BoxDecoration(
@@ -46,46 +44,44 @@ void main() {
             borderRadius: BorderRadius.circular(30),
           ),
                     child: Icon(Icons.settings_outlined,size:40,color: const Color.fromARGB(255, 237, 237, 237),),       
-                     ),
-                    Text('Settings',style: TextStyle(
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 236, 239, 241),
-                    ),),
-        Container(
+         ),
+
+        ],
+        ),
+        Row(
+           mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+           Container(
+            margin: EdgeInsets.only(top: 5,left: 3,right: 85,bottom: 40),
+           child: Text('Camera',style: TextStyle(
+          fontSize: 25,
+          color: Color.fromARGB(255, 238, 239, 240),
+        ),),
+           ),
+           Container(
+            margin: EdgeInsets.only(top: 5,left: 0,right: 25,bottom: 40),
+             child:Text('Chat',style: TextStyle(
+          fontSize: 25,
+          color: Color.fromARGB(255, 238, 239, 240),
+        ),),
+           ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
           margin: EdgeInsets.all(20),
           width: 100,
           height: 100,
-         decoration: BoxDecoration(
-           color: const Color.fromARGB(255, 120, 111, 110),
-           borderRadius: BorderRadius.circular(30),
-         ),
-          child: Icon(Icons.menu_outlined,size:40,color: const Color.fromARGB(255, 238, 235, 235),),
-          
-        ),
-        Text('Menu',style: TextStyle(
-          fontSize: 20,
-          color: Color.fromARGB(255, 235, 237, 239),
-        ),)
-          ],
-        ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-        Container(
-           margin: EdgeInsets.all(20),         
-          width: 100,
-          height: 100,
           decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 129, 116, 115),
+             color: Color.fromARGB(255, 97, 89, 88),
             borderRadius: BorderRadius.circular(30),
+            
           ),
-          child: Icon(Icons.chat_outlined,size:40,color: const Color.fromARGB(255, 253, 251, 251),),
-        ),
-        Text('Chat',style: TextStyle(
-          fontSize: 20,
-          color: Color.fromARGB(255, 240, 241, 242),
-        ),),
-        Container(
+          child: Icon(Icons.settings_outlined,size:40,color: const Color.fromARGB(255, 237, 237, 237),),       
+          ),
+           Container(
           margin: EdgeInsets.all(20),
           width: 100,
           height: 100,
@@ -93,13 +89,45 @@ void main() {
              color: const Color.fromARGB(255, 131, 118, 117),
             borderRadius: BorderRadius.circular(30),
           ),
-                    child: Icon(Icons.home_outlined,size:40,color: const Color.fromARGB(255, 241, 238, 238),),       
-                     ),
-                    Text('Home',style: TextStyle(
+                    child: Icon(Icons.home_outlined,size:40,color: const Color.fromARGB(255, 241, 238, 238),),   
+           ),    
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 5,left: 34,right: 85,bottom: 40),
+             child: Text('Settings',style: TextStyle(
+                      fontSize: 20,
+                      color: Color.fromARGB(255, 236, 239, 241),
+                    ),),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5,left:0,right: 45,bottom: 40),
+            child:Text('Home',style: TextStyle(
                       fontSize: 20,
                       color: Color.fromARGB(255, 242, 243, 244),
                     ),),
-                    Container(
+            ),
+          
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+          margin: EdgeInsets.all(20),
+          width: 100,
+          height: 100,
+         decoration: BoxDecoration(
+           color: Color.fromARGB(255, 90, 83, 83),
+
+borderRadius: BorderRadius.circular(30),
+         ),
+          child: Icon(Icons.menu_outlined,size:40,color: const Color.fromARGB(255, 238, 235, 235),),
+            ),
+             Container(
           margin: EdgeInsets.all(20),
           width: 100,
           height: 100,
@@ -107,16 +135,31 @@ void main() {
              color: const Color.fromARGB(255, 100, 94, 93),
             borderRadius: BorderRadius.circular(30),
           ),
-                    child: Icon(Icons.thumb_up_outlined,size:40,color: const Color.fromARGB(255, 244, 239, 239),),       
-                     ),
-                    Text('Logout',style: TextStyle(
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 241, 244, 246),
-                    ),),
+                    child: Icon(Icons.thumb_up_outlined,size:40,color: const Color.fromARGB(255, 244, 239, 239),), 
+             ),      
           ],
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 5,left: 34,right: 85),
+              child:Text('Menu',style: TextStyle(
+          fontSize: 20,
+          color: Color.fromARGB(255, 235, 237, 239),
+        ),)
+            ),
+            Container(
+               margin: EdgeInsets.only(top: 5,left:0,right: 45),
+               child: Text('Logout',style: TextStyle(
+                color: Colors.white,
+                      fontSize: 20,
+            ),
+               ),
+            ),
+          ],
+        )
         ],
-        ),
     ),
-  ));
+  ),));
 }
